@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/apis": ["apis/index.js"],
+      "@/apis/*": ["apis/*"],
+      "@/components/*": ["components/*"],
+      "@/constants/*": ["constants/*"],
+      "@/containers/*": ["containers/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/i18n/*": ["i18n/*"],
+      "@/layouts/*": ["layouts/*"],
+      "@/public/*": ["public/*"],
+      "@/theme": ["theme/index.js"],
+      "@/theme/*": ["theme/*"],
+      "@/utils/*": ["utils/*"]
+    },
+    "target": "es5",
+    "module": "commonjs",
+  },
+  "include": ["**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3310",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --fix",
+    "lint:ci": "eslint --ignore-pattern '!.eslintrc.json' `git diff origin/master..HEAD --name-only --diff-filter=ACMRTUXB -- '*.js'`",
+    "drone-yaml": "drone jsonnet --stream --format yaml"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn prettier",
+      "yarn lint"
+    ]
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "@tanstack/react-query": "^4.24.4",
+    "@tanstack/react-query-devtools": "^4.24.4",
+    "next": "^13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-intl": "^6.2.8",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^13.1.6",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4"
+  }
+}
